@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="assets/css/stye.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -20,51 +20,105 @@
         </div>
     </nav>
 
-    <div class="title-wrapper">
-        <div class="portrait-container">
-            <img class="self-portrait" alt="A Photo of Me">
-        </div>
-        <div class="introduction-container">
-            Hello!👋 My name is Aidan Caliolio
-            📍Philippines
-        </div>
-        <div class="description-container">
-            STUDENT PROGRAMMER
-        </div>
-        <div class="contact-card-container">
-            <img class="github-icon">
-            <img class="linkedin-icon">
-            <img class="resume-icon">
-        </div>
-    </div>
-
-    <div class="tech-stack-wrapper">
-        <div class="tech-stack-description">
-            Here are my technologies that I'm using as I have a current interest in OS development at the moment.
-        </div>
-
-        <div class="stack-wrapper">
-            <div class="stack-container">
-                <img class="python-icon">
-                Python
+    <main>
+        <div class="title-wrapper">
+            <div class="portrait-container">
+                <img class="self-portrait" src="assets/images/me.png" alt="A Photo of Me">
             </div>
-            <div class="stack-container">
-                <img class="git-icon">
-                Git
-            </div>
-        </div>
-    </div>
-
-    <div class="experience-wrapper">
-        2024 - IT Olympiad Python Finalist
         
-        2023 - ISITE Competition Python Participant
-    </div>
+            <div class="introduction-container">
+                <div class="welcome">Hi, I'm Aidan 👋</div>
+                <div class="location">📍Philippines</div>
+            </div>
+            
+            <div class="description-container">
+                STUDENT PROGRAMMER
+            </div>
 
-    <div class="projects-wrapper">
-        <div class="project-container">
-
+            <div class="contact-card-container">
+                <div class="resume-container">
+                    <div class="resume-text">Resume</div>
+                    <img src="assets/images/resume-icon.png" class="resume-icon">
+                </div>
+                <img src="assets/images/linkedin-icon-color.png" class="linkedin-icon">
+                <img src="assets/images/github-icon.png" class="github-icon">
+            </div>
         </div>
-    </div>
+        
+        <div class="tech-stack-wrapper">
+            <div class="tech-stack-description">
+                Here are my technologies that I'm using.
+            </div>
+        
+            <div class="stack-wrapper">
+                <div class="stack-container">
+                    <img src="assets/images/python-icon.webp" class="tech-icon">
+                    Python
+                </div>
+                <div class="stack-container">
+                    <img src="assets/images/git-icon.png" class="tech-icon">
+                    Git
+                </div>
+                <div class="stack-container">
+                    <img src="assets/images/php-icon.png" class="tech-icon">
+                    PHP
+                </div>
+                <div class="stack-container">
+                    <img src="assets/images/postgresql-icon.png" class="tech-icon">
+                    PostgreSQL
+                </div>
+            </div>
+        </div>
+        
+        <div class="experience-wrapper">
+            2024 - IT Olympiad Python Finalist
+            
+            2023 - ISITE Competition Python Participant
+        </div>
+        
+        <div class="projects-wrapper">
+            Projects That I am currently working on
+        
+            <div class="project-card">
+                <img class="project-image">
+                Student Registration System
+                <div class="tech-stack-project">
+                    Tech Stack Used:
+                    Python
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <img class="project-image">
+                Movie Booking System
+                <div class="tech-stack-project">
+                    Tech Stack Used:
+                    Python
+                </div>
+            </div>
+        
+            <div class="project-card">
+                <img class="project-image">
+                Registration Website
+                <div class="tech-stack-project">
+                    Tech Stack Used:
+                    PHP - Postgresql
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="explore-section">
+                <ul>
+                    <li class="explore-main">Explore</li>
+                    <li>Home</li>
+                    <li>About me</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

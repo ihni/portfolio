@@ -1,0 +1,132 @@
+body {
+  background-color: rgb(15, 15, 16);
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+main {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/* 
+* NAVIGATION BAR
+*/
+
+.navbar {
+  display: flexbox;
+  width: 300px;
+  height: 50px;
+  margin: auto;
+  align-content: center;
+  text-align: center;
+  border-radius: 50px;
+  background-color: rgb(13, 13, 13);
+}
+
+.navbar-button {
+  color: rgb(192, 192, 192);
+  border-bottom: none;
+  display: inline;
+  margin: 0px 10px 0px 10px;
+  transition: color 0.15s, border-bottom 0.1s;
+}
+.navbar-button:hover {
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255,255,255);
+}
+
+/* 
+* INTRODUCTION
+*/
+
+.title-wrapper {
+  margin-bottom: 2rem;
+}
+
+.portrait-container {
+  display: inline-block;
+}
+
+.self-portrait {
+  width: 10rem;
+  border-radius: 100%
+}
+
+.introduction-container {
+  display: inline;
+}
+
+.welcome {
+  font-size: 40px;
+}
+
+.location {
+  font-size: 20px;
+}
+
+.description-container {
+  margin-bottom: 30px;
+}
+
+.contact-card-container {
+  display: flex;
+  align-items: center; /* Vertically center all elements in the container */
+}
+
+.resume-container {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding: 2px 0px 2px 5px;
+  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.2);
+  transition: background-color 0.15s;
+}
+
+.resume-container:hover {
+  background-color: rgba(255,255,255,0.05);
+}
+
+.resume-text {
+  font-weight: bold;
+}
+
+.resume-icon {
+  width: 25px;
+  height: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  filter: invert(100%);
+}
+
+.linkedin-icon, .github-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+.github-icon {
+  filter: invert(100%);
+}
+
+/* 
+* For the technologies that i used
+*/
+
+.stack-wrapper {
+
+}
+
+.stack-container {
+  display: inline-block;
+  color: rgb(147, 147, 147);
+}
+
+.tech-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
