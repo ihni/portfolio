@@ -1,132 +1,388 @@
-body {
-  background-color: rgb(15, 15, 16);
-  padding: 0;
+@font-face {
+  font-family: lato;
+  src: url(/assets/fonts/Lato-Regular.ttf);
+}
+* {
   margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  line-height: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: rgb(15, 15, 16);
   color: white;
 }
 
+/* 
+* HEADER AND NAVIGATION BAR
+*/
+
+header {
+  backdrop-filter: blur(4px);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  z-index: 90000;
+  top: 0;
+  position: sticky;
+  border: 0 solid rgb(255,255,255)
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+ul {
+  gap: 2rem;
+  display: flex;
+  list-style: none;
+  margin: none;
+  padding: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+/*
+*
+* Main Content
+*
+*/
+
 main {
-  padding-left: 10%;
-  padding-right: 10%;
+  flex-grow: 1;
 }
 
-/* 
-* NAVIGATION BAR
+.main-content {
+  padding-bottom: 4rem;
+  gap: 4rem;
+  flex-direction: column;
+  display: flex;
+  margin-top: 3rem;
+}
+
+/*
+*
+* Section for the introduction
+*
 */
 
-.navbar {
-  display: flexbox;
-  width: 300px;
-  height: 50px;
-  margin: auto;
-  align-content: center;
-  text-align: center;
-  border-radius: 50px;
-  background-color: rgb(13, 13, 13);
-}
-
-.navbar-button {
-  color: rgb(192, 192, 192);
-  border-bottom: none;
-  display: inline;
-  margin: 0px 10px 0px 10px;
-  transition: color 0.15s, border-bottom 0.1s;
-}
-.navbar-button:hover {
-  color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(255,255,255);
-}
-
-/* 
-* INTRODUCTION
-*/
-
-.title-wrapper {
-  margin-bottom: 2rem;
-}
-
-.portrait-container {
-  display: inline-block;
+.introduction-wrapper {
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 2rem;
+  display: flex;
 }
 
 .self-portrait {
-  width: 10rem;
-  border-radius: 100%
+  color: transparent;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  width: 175px;
+  border-radius: 3px;
 }
 
 .introduction-container {
-  display: inline;
-}
-
-.welcome {
-  font-size: 40px;
-}
-
-.location {
-  font-size: 20px;
-}
-
-.description-container {
-  margin-bottom: 30px;
-}
-
-.contact-card-container {
+  flex-direction: column;
   display: flex;
-  align-items: center; /* Vertically center all elements in the container */
 }
 
-.resume-container {
-  font-size: 20px;
-  display: flex;
+.title-text {
+  font-size: 3rem;
+  line-height: 1;
+  margin: 0;
+  font-weight: inherit;
+}
+
+.location-text {
+  font-weight: 400;
+  margin: 0;
+  margin-top: 0.5rem;
+}
+
+.description-text {
+  font-weight: 300;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.contacts {
+  gap: 2rem;
   align-items: center;
-  margin-right: 10px;
-  padding: 2px 0px 2px 5px;
-  box-shadow: 0 0 2px 1px rgba(255, 255, 255, 0.2);
-  transition: background-color 0.15s;
+  display: flex;
+  margin-top: 1.8rem;
 }
 
-.resume-container:hover {
-  background-color: rgba(255,255,255,0.05);
+.resume-button {
+  box-shadow: 0 0 0.5px 0.5px rgba(255,255,255,0.1);
+  font-weight: 500;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  padding: .5rem 1rem .5rem 1rem;
+  background-color:rgb(15, 15, 16);
+  color: white;
+  border: 1px solid rgb(26, 26, 27);
+  border-radius: .6rem;
+  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 2.25rem;
+  display: inline-flex;
+  cursor: pointer;
+  transition: background-color 0.15s, boxshadow 0.15s;
 }
-
-.resume-text {
-  font-weight: bold;
+.resume-button:hover {
+  background-color: rgb(26, 26, 27);
+  box-shadow: none;
 }
 
 .resume-icon {
-  width: 25px;
+  width: 1.25rem;
   height: auto;
-  margin-left: 10px;
-  margin-right: 10px;
   filter: invert(100%);
+  margin-left: .8rem;
+  display: block;
 }
 
-.linkedin-icon, .github-icon {
-  width: 30px;
-  height: 30px;
-  margin-left: 15px;
+.other-contacts {
+  gap: 1.5rem;
+  display: flex;
+  align-items: center;
 }
 
-.github-icon {
+.contact-icon {
+  width: 20px;
+  vertical-align: middle;
+  height: 20px;
   filter: invert(100%);
+  opacity: 0.5;
+  transition: opacity 0.15s;
+  margin: 0;
 }
 
-/* 
-* For the technologies that i used
+.contact-icon:hover {
+  opacity: 1;
+}
+
+/*
+*
+* Section for the technologies that i use
+*
 */
 
-.stack-wrapper {
-
+.technologies-wrapper {
+  margin-top: 2rem;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.8rem;
+  display: flex;
 }
 
-.stack-container {
-  display: inline-block;
-  color: rgb(147, 147, 147);
+.technology-header {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.technology-description {
+  font-weight: 300;
+  font-size: .8rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.technologies-container {
+  opacity: 1;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  display: grid;
+  width: 100%;
+}
+
+/* These are the single container */
+
+.tech-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: left;
+  border-radius: 1rem;
+  padding: .625rem;
+  background-color: rgb(26 26 26);
+  transition: background-color 0.15s;
+}
+
+.tech-container:hover {
+  background-color: rgb(32, 32, 32);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  border-radius: .5rem;
+  padding: .75rem;
 }
 
 .tech-icon {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
+  width: 1.5rem;
+  height: auto;
   display: block;
+  color: transparent;
+}
+
+.tech-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tech-name {
+  font-size: 0.65rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.tech-description {
+  font-weight: 300;
+  font-size: 0.5rem;
+  color: rgb(172, 172, 172);
+  margin-top: .3rem;
+}
+
+/*
+*
+* Section for the projects i've made
+*
+*/
+
+.project-header-container {
+  justify-content: space-between;
+  display: flex;
+}
+
+.project-title-text {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+
+.view-more-projects {
+  font-weight: 300;
+  gap: .5rem;
+  align-items: center;
+  display: inline-flex;
+  font-size: 1rem;
+  color: rgb(255,255,255);
+  opacity: 0.5;
+  border-bottom: 1px solid rgba(0,0,0,0);
+  cursor: pointer;
+  transition: opacity 0.15s, border-bottom 0.15s;
+}
+
+.view-more-projects:hover {
+  border-bottom: 1px solid rgba(255,255,255,1);
+  opacity: 1;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1rem;
+}
+
+/* Project Card Itself */
+
+.project-card {
+  box-shadow: 0 0 0.5px 0.5px rgba(255,255,255,0.1);
+  border-width: 1px;
+  border-radius: .75rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.project-image-container {
+  padding: 1.5rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.project-image {
+  color: transparent;
+  object-position: top;
+  object-fit: cover;
+  width: 100%;
+  height: 10rem;
+  max-width: 100%;
+  display: block;
+}
+
+.about-project {
+  padding-top: 0;
+  padding: 1.5rem;
+  gap: .5rem;
+  flex-direction: column;
+  display: flex;
+}
+
+.project-title-card {
+  letter-spacing: -.025em;
+  line-height: 1;
+  font-weight: 600;
+  margin: 0;
+  font-size: inherit;
+}
+
+.project-description {
+  font-size: .75rems;
+  line-height: 1rem;
+  max-width: 100%;
+}
+
+/* Section for the tech stack in the project card */
+
+.tech-stack-used-for-project {
+  padding-top: 0;
+  padding: 1.5rem;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+
+.tech-project-container {
+  gap: .25rem;
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: .5rem;
+}
+
+.technology-of-project {
+  font-weight: 600;
+  font-size: 10px;
+  padding: 0 .25rem 0 .25rem;
+  background-color: rgb(28, 28, 30);
+  border-radius: 2px;
+  align-items: center;
+  display: inline-flex;
 }

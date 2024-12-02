@@ -3,122 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <title>My Portfolio</title>
+
+    <style>
+    
+    .sr-only {
+        position: absolute ;
+        left: -10000px;
+        width: 1px;
+        height: 1px;
+        top: auto;
+        overflow: hidden;
+    }
+    
+    </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="navbar-button">
-            Home
-        </div>
-        <div class="navbar-button">
-            Projects
-        </div>
-        <div class="navbar-button">
-            More
-        </div>
-    </nav>
-
+    <header>
+        <nav>
+            <ul>
+                <li>home</li>
+                <li>projects</li>
+                <li>more</li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        <div class="title-wrapper">
-            <div class="portrait-container">
-                <img class="self-portrait" src="assets/images/me.png" alt="A Photo of Me">
-            </div>
-        
-            <div class="introduction-container">
-                <div class="welcome">Hi, I'm Aidan 👋</div>
-                <div class="location">📍Philippines</div>
-            </div>
-            
-            <div class="description-container">
-                STUDENT PROGRAMMER
-            </div>
+        <article class="main-content">
+            <section class="introduction-wrapper">
+                <img class="self-portrait" fetchpriority="high" src="assets/images/me.png">
+                <div class="introduction-container">
+                    <h1 class="title-text">Hi, I'm Aidan 👋</h1>
+                    <p class="location-text">📍Philippines</p>
+                    <p class="description-text">I'm a computer science student with in interest in OS-Development!</p>
+                    <section class="contacts">
+                        <a target="_blank" href="resume.pdf"><button class="resume-button">
+                            <span style="font-weight: 600;">Resume</span>
+                            <img class="resume-icon" src="assets/images/resume-icon.png">
+                        </button></a>
+                        <section class="other-contacts">
+                            <a target="_blank" href="https://github.com/ihni">
+                                <span class="sr-only">Github</span>
+                                <img class="contact-icon" src="assets/images/github-icon.png">
+                            </a>
+                            <a target="_blank" href="https://linkedin.com">
+                                <span class="sr-only">LinkedIn</span>
+                                <img class="contact-icon" src="assets/images/linkedin-icon-nocolor.png">
+                            </a>
+                        </section>
+                    </section>
+                </div>
+            </section>
 
-            <div class="contact-card-container">
-                <div class="resume-container">
-                    <div class="resume-text">Resume</div>
-                    <img src="assets/images/resume-icon.png" class="resume-icon">
+            <section class="technologies-wrapper">
+                <h2 class="technology-header">Current Technologies</h2>
+                <p class="technology-description">These are the current technologies I'm using and learning!</p>
+                <section class="technologies-container">
+                    <div class="tech-container">
+                        <div style="background-color: rgba(75, 168, 255, 0.2);" class="image-container">
+                            <img class="tech-icon" src="assets/images/tech-stack/c-icon.png">
+                        </div>
+                        <div>
+                            <h4 class="tech-name">C</h4>
+                            <p class="tech-description">Systems Language</p>
+                        </div>
+                    </div>
+                    <div class="tech-container">
+                        <div style="background-color: rgba(118, 173, 255, 0.2);" class="image-container">
+                            <img class="tech-icon" src="assets/images/tech-stack/python-icon.webp">
+                        </div>
+                        <div>
+                            <h4 class="tech-name">Python</h4>
+                            <p class="tech-description">General Language</p>
+                        </div>
+                    </div>
+                    <div class="tech-container">
+                        <div style="background-color: rgba(119, 109, 255, 0.2); " class="image-container">
+                            <img class="tech-icon" src="assets/images/tech-stack/php-icon.png">
+                        </div>
+                        <div>
+                            <h4 class="tech-name">PHP</h4>
+                            <p class="tech-description">Backend Language</p>
+                        </div>
+                    </div>
+                    <div class="tech-container">
+                        <div style="background-color: rgba(67, 155, 255, 0.2); " class="image-container">
+                            <img class="tech-icon" src="assets/images/tech-stack/postgresql-icon.png">
+                        </div>
+                        <div>
+                            <h4 class="tech-name">PostgreSQL</h4>
+                            <p class="tech-description">Database</p>
+                        </div>
+                    </div>
+                    <div class="tech-container">
+                        <div style="background-color: rgba(255, 120, 96, 0.2); " class="image-container">
+                            <img class="tech-icon" src="assets/images/tech-stack/git-icon.png">
+                        </div>
+                        <div>
+                            <h4 class="tech-name">Git</h4>
+                            <p class="tech-description">Version Control</p>
+                        </div>
+                    </div>
+                    <div class="tech-container">
+                        <div style="background-color: rgba(109, 109, 109, 0.2); " class="image-container">
+                            <img style="filter: invert(100%);" class="tech-icon" src="assets/images/tech-stack/rust-icon.png">
+                        </div>
+                        <div>
+                            <h4 class="tech-name">Rust</h4>
+                            <p class="tech-description">Systems Language</p>
+                        </div>
+                    </div>
+                    <div class="tech-container">
+                        <div style="background-color: #ec5cff33; " class="image-container">
+                            <img class="tech-icon" src="assets/images/tech-stack/apache-icon.png">
+                        </div>
+                        <div>
+                            <h4 class="tech-name">Apache</h4>
+                            <p class="tech-description">Web Server</p>
+                        </div>
+                    </div>
+                    <div class="tech-container">
+                        <div style="background-color: rgba(222, 222, 222, 0.2); " class="image-container">
+                            <img class="tech-icon" src="assets/images/tech-stack/linux-icon.png">
+                        </div>
+                        <div>
+                            <h4 class="tech-name">Linux</h4>
+                            <p class="tech-description">OS</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section class="projects-wrapper">
+                <div class="project-header-container">
+                    <h2 class="project-title-text">My Projects</h2>
+                    <a class="view-more-projects">
+                        view more
+                    </a>
                 </div>
-                <img src="assets/images/linkedin-icon-color.png" class="linkedin-icon">
-                <img src="assets/images/github-icon.png" class="github-icon">
-            </div>
-        </div>
-        
-        <div class="tech-stack-wrapper">
-            <div class="tech-stack-description">
-                Here are my technologies that I'm using.
-            </div>
-        
-            <div class="stack-wrapper">
-                <div class="stack-container">
-                    <img src="assets/images/python-icon.webp" class="tech-icon">
-                    Python
-                </div>
-                <div class="stack-container">
-                    <img src="assets/images/git-icon.png" class="tech-icon">
-                    Git
-                </div>
-                <div class="stack-container">
-                    <img src="assets/images/php-icon.png" class="tech-icon">
-                    PHP
-                </div>
-                <div class="stack-container">
-                    <img src="assets/images/postgresql-icon.png" class="tech-icon">
-                    PostgreSQL
-                </div>
-            </div>
-        </div>
-        
-        <div class="experience-wrapper">
-            2024 - IT Olympiad Python Finalist
-            
-            2023 - ISITE Competition Python Participant
-        </div>
-        
-        <div class="projects-wrapper">
-            Projects That I am currently working on
-        
-            <div class="project-card">
-                <img class="project-image">
-                Student Registration System
-                <div class="tech-stack-project">
-                    Tech Stack Used:
-                    Python
-                </div>
-            </div>
-        
-            <div class="project-card">
-                <img class="project-image">
-                Movie Booking System
-                <div class="tech-stack-project">
-                    Tech Stack Used:
-                    Python
-                </div>
-            </div>
-        
-            <div class="project-card">
-                <img class="project-image">
-                Registration Website
-                <div class="tech-stack-project">
-                    Tech Stack Used:
-                    PHP - Postgresql
-                </div>
-            </div>
-        </div>
+                <section class="projects-container">
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <a href="https://github.com">
+                                <img class="project-image" src="assets/images/projects/template-project.jpg">
+                            </a>
+                        </div>
+                        <div class="about-project">
+                            <h3 class="project-title-card">Student Registration System</h3>
+                            <div class="project-description">
+                                <p>Application for keeping track of student records, designed for system administrators.</p>
+                            </div>
+                        </div>
+                        <div class="tech-stack-used-for-project">
+                            <div class="tech-project-container">
+                                <div class="technology-of-project">
+                                    Python
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <a href="https://github.com">
+                                <img class="project-image" src="assets/images/projects/template-project.jpg">
+                            </a>
+                        </div>
+                        <div class="about-project">
+                            <h3 class="project-title-card">Registration Website</h3>
+                            <div class="project-description">
+                                <p>My first project when it comes to full-stack development.</p>
+                            </div>
+                        </div>
+                        <div class="tech-stack-used-for-project">
+                            <div class="tech-project-container">
+                                <div class="technology-of-project">
+                                    PHP
+                                </div>
+                                <div class="technology-of-project">
+                                    MySQL
+                                </div>
+                                <div class="technology-of-project">
+                                    Apache
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+        </article>
     </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="explore-section">
-                <ul>
-                    <li class="explore-main">Explore</li>
-                    <li>Home</li>
-                    <li>About me</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
