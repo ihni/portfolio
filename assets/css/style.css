@@ -1,17 +1,20 @@
+/* Base Styles */
 @font-face {
   font-family: lato;
   src: url(/assets/fonts/Lato-Regular.ttf);
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   margin: 0;
   line-height: inherit;
   margin-left: auto;
   margin-right: auto;
-  max-width: 48rem;
+  max-width: 48rem; /* Max width */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -20,6 +23,7 @@ body {
   padding-right: 2rem;
   background-color: rgb(15, 15, 16);
   color: white;
+  min-width: 320px; /* Set minimum width for body */
 }
 
 /* 
@@ -33,7 +37,7 @@ header {
   z-index: 90000;
   top: 0;
   position: sticky;
-  border: 0 solid rgb(255,255,255)
+  border: 0 solid rgb(255,255,255);
 }
 
 nav {
@@ -54,11 +58,7 @@ li {
   cursor: pointer;
 }
 
-/*
-*
-* Main Content
-*
-*/
+/* Main Content */
 
 main {
   flex-grow: 1;
@@ -72,12 +72,7 @@ main {
   margin-top: 3rem;
 }
 
-/*
-*
-* Section for the introduction
-*
-*/
-
+/* Introduction Wrapper */
 .introduction-wrapper {
   justify-content: space-between;
   align-items: center;
@@ -87,7 +82,6 @@ main {
 }
 
 .self-portrait {
-  color: transparent;
   max-width: 100%;
   height: auto;
   display: block;
@@ -132,7 +126,7 @@ main {
   font-size: .875rem;
   line-height: 1.25rem;
   padding: .5rem 1rem .5rem 1rem;
-  background-color:rgb(15, 15, 16);
+  background-color: rgb(15, 15, 16);
   color: white;
   border: 1px solid rgb(26, 26, 27);
   border-radius: .6rem;
@@ -142,7 +136,7 @@ main {
   height: 2.25rem;
   display: inline-flex;
   cursor: pointer;
-  transition: background-color 0.15s, boxshadow 0.15s;
+  transition: background-color 0.15s, box-shadow 0.15s;
 }
 .resume-button:hover {
   background-color: rgb(26, 26, 27);
@@ -177,12 +171,7 @@ main {
   opacity: 1;
 }
 
-/*
-*
-* Section for the technologies that i use
-*
-*/
-
+/* Technologies Section */
 .technologies-wrapper {
   margin-top: 2rem;
   justify-content: flex-start;
@@ -218,10 +207,9 @@ main {
 }
 
 /* These are the single container */
-
 .tech-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Default for larger screens, image on the left, text on the right */
   align-items: center;
   gap: 1.25rem;
   text-align: left;
@@ -269,12 +257,7 @@ main {
   margin-top: .3rem;
 }
 
-/*
-*
-* Section for the projects i've made
-*
-*/
-
+/* Projects Section */
 .project-header-container {
   justify-content: space-between;
   display: flex;
@@ -305,12 +288,11 @@ main {
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 columns by default */
+  gap: 1rem;  /* Space between the cards */
 }
 
-/* Project Card Itself */
-
+/* Project Card */
 .project-card {
   box-shadow: 0 0 0.5px 0.5px rgba(255,255,255,0.1);
   border-width: 1px;
@@ -352,12 +334,10 @@ main {
 }
 
 .project-description {
-  font-size: .75rems;
+  font-size: .75rem;
   line-height: 1rem;
   max-width: 100%;
 }
-
-/* Section for the tech stack in the project card */
 
 .tech-stack-used-for-project {
   padding-top: 0;
@@ -385,4 +365,269 @@ main {
   border-radius: 2px;
   align-items: center;
   display: inline-flex;
+}
+
+/* Responsive Styles with Media Queries */
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+  body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .main-content {
+    padding-bottom: 2rem;
+  }
+
+  .introduction-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .self-portrait {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .introduction-container {
+    text-align: center;
+  }
+
+  .title-text {
+    font-size: 2rem;
+  }
+
+  .location-text,
+  .description-text {
+    font-size: 1rem;
+  }
+
+  .contacts {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .technologies-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr; /* 1 column on smaller screens */
+    gap: 1rem;  /* Space between the cards */
+  }
+
+  .project-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .tech-stack-used-for-project {
+    padding: 1rem;
+  }
+
+  .view-more-projects {
+    font-size: 0.9rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .technology-of-project {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .tech-container {
+    flex-direction: column; /* Stack text below the image on smaller screens */
+    align-items: center;    /* Center text below the image */
+    gap: 1rem;              /* Add space between image and text */
+  }
+
+  .tech-name {
+    font-size: 0.75rem; /* Slightly larger font size for readability on smaller screens */
+    text-align: center; /* Center the name */
+  }
+
+  .tech-description {
+    font-size: 0.6rem; /* Increase size slightly for readability */
+    text-align: center; /* Center the description */
+  }
+
+  .tech-icon {
+    width: 2rem; /* Make the icon a bit larger for smaller screens */
+  }
+}
+
+/* Tablet Devices */
+@media screen and (max-width: 1024px) {
+  body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .main-content {
+    padding-bottom: 3rem;
+  }
+
+  .introduction-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .self-portrait {
+    width: 175px;
+  }
+
+  .title-text {
+    font-size: 2.5rem;
+  }
+
+  .location-text {
+    font-size: 1.1rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
+  }
+
+  .contacts {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .technologies-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-stack-used-for-project {
+    padding: 1.25rem;
+  }
+
+  .project-title-card {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+  }
+
+  .technology-of-project {
+    font-size: 0.9rem;
+  }
+}
+
+/* Large Desktop Devices */
+@media screen and (min-width: 1200px) {
+  .main-content {
+    padding-bottom: 6rem;
+  }
+
+  .introduction-wrapper {
+    flex-direction: row-reverse;
+    gap: 3rem;
+  }
+
+  .self-portrait {
+    width: 200px;
+  }
+
+  .title-text {
+    font-size: 3rem;
+  }
+
+  .location-text {
+    font-size: 1.2rem;
+  }
+
+  .description-text {
+    font-size: 1.1rem;
+  }
+
+  .technologies-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .view-more-projects {
+    font-size: 1rem;
+  }
+
+  .tech-stack-used-for-project {
+    padding: 1.5rem;
+  }
+}
+
+/* Ensure text is responsive */
+@media screen and (max-width: 480px) {
+  .title-text {
+    font-size: 1.8rem;
+  }
+
+  .location-text,
+  .description-text {
+    font-size: 0.9rem;
+  }
+
+  .technology-header {
+    font-size: 1.25rem;
+  }
+
+  .technology-description {
+    font-size: 0.7rem;
+  }
+
+  .tech-name {
+    font-size: 0.55rem;
+  }
+
+  .tech-description {
+    font-size: 0.45rem;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr; /* Keep it as a single column */
+    gap: 1.5rem;  /* Slightly larger gap between cards for better spacing */
+  }
+
+  .project-title-card {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  .technology-of-project {
+    font-size: 0.75rem;
+  }
+
+  .tech-container {
+    gap: 1.5rem; /* More space between image and text */
+  }
+
+  .tech-name {
+    font-size: 0.85rem; /* Adjust name font size for smaller devices */
+    text-align: center; /* Center the name */
+  }
+
+  .tech-description {
+    font-size: 0.7rem;  /* Adjust description font size */
+    text-align: center; /* Center the description */
+  }
 }
