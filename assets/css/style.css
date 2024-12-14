@@ -1,8 +1,8 @@
-/* Base Styles */
-@font-face {
-  font-family: lato;
-  src: url(/assets/fonts/Lato-Regular.ttf);
-}
+/* 
+*
+* Base Styles
+*
+*/
 
 * {
   margin: 0;
@@ -27,8 +27,11 @@ body {
 }
 
 /* 
-* HEADER AND NAVIGATION BAR
+*
+* Header and Navigation
+*
 */
+
 
 header {
   backdrop-filter: blur(4px);
@@ -46,7 +49,7 @@ nav {
   display: flex;
 }
 
-ul {
+.nav-list {
   gap: 2rem;
   display: flex;
   list-style: none;
@@ -54,11 +57,16 @@ ul {
   padding: none;
 }
 
-li {
+.nav-element {
   cursor: pointer;
 }
 
-/* Main Content */
+/* 
+*
+* Main Content
+*
+*/
+
 
 main {
   flex-grow: 1;
@@ -171,7 +179,12 @@ main {
   opacity: 1;
 }
 
-/* Technologies Section */
+/* 
+*
+* Technologies section
+*
+*/
+
 .technologies-wrapper {
   margin-top: 2rem;
   justify-content: flex-start;
@@ -209,7 +222,7 @@ main {
 /* These are the single container */
 .tech-container {
   display: flex;
-  flex-direction: row; /* Default for larger screens, image on the left, text on the right */
+  flex-direction: row;
   align-items: center;
   gap: 1.25rem;
   text-align: left;
@@ -257,10 +270,22 @@ main {
   margin-top: .3rem;
 }
 
-/* Projects Section */
+/*
+*
+* Experience Section
+*
+*/
+
+/*
+*
+* Project Section
+*
+*/
+
 .project-header-container {
   justify-content: space-between;
   display: flex;
+  margin-bottom: 1rem;
 }
 
 .project-title-text {
@@ -367,6 +392,10 @@ main {
   display: inline-flex;
 }
 
+
+
+
+
 /* Responsive Styles with Media Queries */
 
 /* Mobile Devices */
@@ -416,8 +445,8 @@ main {
   }
 
   .projects-container {
-    grid-template-columns: 1fr; /* 1 column on smaller screens */
-    gap: 1rem;  /* Space between the cards */
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .project-card {
@@ -445,21 +474,21 @@ main {
   .tech-container {
     flex-direction: column; /* Stack text below the image on smaller screens */
     align-items: center;    /* Center text below the image */
-    gap: 1rem;              /* Add space between image and text */
+    gap: 1rem;
   }
 
   .tech-name {
-    font-size: 0.75rem; /* Slightly larger font size for readability on smaller screens */
-    text-align: center; /* Center the name */
+    font-size: 0.75rem;
+    text-align: center;
   }
 
   .tech-description {
-    font-size: 0.6rem; /* Increase size slightly for readability */
-    text-align: center; /* Center the description */
+    font-size: 0.6rem;
+    text-align: center;
   }
 
   .tech-icon {
-    width: 2rem; /* Make the icon a bit larger for smaller screens */
+    width: 2rem;
   }
 }
 
@@ -601,8 +630,8 @@ main {
   }
 
   .projects-container {
-    grid-template-columns: 1fr; /* Keep it as a single column */
-    gap: 1.5rem;  /* Slightly larger gap between cards for better spacing */
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .project-title-card {
@@ -618,16 +647,16 @@ main {
   }
 
   .tech-container {
-    gap: 1.5rem; /* More space between image and text */
+    gap: 1.5rem;
   }
 
   .tech-name {
-    font-size: 0.85rem; /* Adjust name font size for smaller devices */
-    text-align: center; /* Center the name */
+    font-size: 0.85rem;
+    text-align: center;
   }
 
   .tech-description {
-    font-size: 0.7rem;  /* Adjust description font size */
-    text-align: center; /* Center the description */
+    font-size: 0.7rem;
+    text-align: center;
   }
 }
