@@ -534,7 +534,7 @@ main {
   }
 
   .projects-container {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .tech-stack-used-for-project {
@@ -544,7 +544,6 @@ main {
   .project-title-card {
     font-size: 1rem;
   }
-
   .project-description {
     font-size: 1rem;
   }
@@ -634,6 +633,9 @@ main {
     gap: 1.5rem;
   }
 
+  .project-card {
+    min-height: 15rem;
+  }
   .project-title-card {
     font-size: 1rem;
   }
@@ -648,15 +650,16 @@ main {
 
   .tech-container {
     gap: 1.5rem;
+    max-height: 3.75rem;
   }
 
   .tech-name {
-    font-size: 0.85rem;
+    font-size: 0px;
     text-align: center;
   }
 
   .tech-description {
-    font-size: 0.7rem;
+    font-size: 0px;
     text-align: center;
   }
 }
