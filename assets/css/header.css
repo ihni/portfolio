@@ -1,0 +1,42 @@
+header {
+    backdrop-filter: blur(4px);
+    padding-top: 1.5rem;
+    padding-bottom: 1.2rem;
+    z-index: 90000;
+    top: 0;
+    position: sticky;
+    border: 0 solid rgb(255,255,255);
+}
+
+nav {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+.nav-list {
+    gap: 2rem;
+    display: flex;
+    list-style: none;
+    margin: none;
+    padding: none;
+}
+
+.nav-list li {
+    cursor: pointer;
+    opacity: 0.8;
+    padding-bottom: 0.5rem;
+    color: rgb(255,255,255);
+    border-bottom: 1px solid rgba(0,0,0,0);
+    transition: opacity 0.15s, border-bottom 0.15s;
+}
+
+.nav-list li:hover {
+    border-bottom: 1px solid rgba(255,255,255,1);
+    opacity: 1;
+}

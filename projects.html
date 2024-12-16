@@ -23,9 +23,9 @@
     <header>
         <nav>
             <ul class="nav-list">
-                <a href="index.html"><li class="nav-element">home</li></a>
-                <a href="wip.html"><li class="nav-element">projects</li></a>
-                <a href="wip.html"><li class="nav-element">more</li></a>
+                <a href="index.html"><li>home</li></a>
+                <a href="projects.html"><li>projects</li></a>
+                <a href="wip.html"><li>more</li></a>
             </ul>
         </nav>
     </header>
@@ -143,29 +143,24 @@
     </main>
 
     <footer>
-        <!-- container mx-auto px-4 flex flex-col md:flex-row justify-between items-center -->
-        <div>
-            <!-- "flex space-x-4 mb-4 md:mb-0" -->
-            <section>
-                <!-- text-gray-600 hover:text-gray-400 -->
+        <div class="footer-container">
+            <section class="footer-icons">
                 <a href="https://github.com/ihni/" target="_blank">
-                    <!-- "h-10 w-10" -->
-                    <img src="assets/images/github-icon.png" alt="Github Icon">
+                    <img src="assets/images/github-icon.png" alt="Github Icon" class="icon">
                 </a>
-                <a href="https://linkedin.com/" target="_blank" class="text-gray-600 hover:text-gray-400">
-                    <img class="h-10 w-10" src="assets/images/linkedin-icon-nocolor.png" alt="LinkedIn Icon">
+                <a href="https://linkedin.com/" target="_blank">
+                    <img class="icon" src="assets/images/linkedin-icon-nocolor.png" alt="LinkedIn Icon">
                 </a>
             </section>
-    
-            <section class="text-center md:text-left mt-4 md:mt-0">
-                <p class="text-sm text-gray-600">
+            <section class="footer-text">
+                <p>
                     <span>© 2024</span>
-                    <a href="#" class="hover:text-gray-400">ihni.github.io/portfolio</a>
-                    <span class="mx-2">|</span>
-                    <a href="#" class="hover:text-gray-400">Privacy?</a>
+                    <a href="#">ihni.github.io/portfolio</a>
+                    <span class="separator">|</span>
+                    <a href="#">Privacy?</a>
                 </p>
             </section>
         </div>
     </footer>
-    </body>
-    </html>
+</body>
+</html>
