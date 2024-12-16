@@ -173,7 +173,7 @@ main {
 
 .technology-header {
   font-size: 1.5rem;
-  line-height: 1;
+  line-height: 2.25rem;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -366,7 +366,7 @@ main {
   font-weight: 600;
   font-size: 10px;
   padding: .2rem .27rem .2rem .27rem;
-  background-color: rgb(26, 26, 28);
+  background-color: rgb(35, 35, 39);
   border-radius: 5px;
   align-items: center;
   display: inline-flex;
@@ -374,7 +374,7 @@ main {
 }
 
 .technology-of-project:hover {
-  background-color: rgb(23, 23, 25);
+  background-color: rgb(36, 36, 40);
 }
 
 .tech-demo-wrapper {
