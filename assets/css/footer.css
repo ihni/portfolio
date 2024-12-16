@@ -1,0 +1,14 @@
+footer {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+footer img {
+    width: 20px;
+    vertical-align: middle;
+    height: 20px;
+    filter: invert(100%);
+    opacity: 1;
+    transition: opacity 0.15s;
+    margin: 0;
+}
